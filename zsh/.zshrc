@@ -8,3 +8,4 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 alias dc="docker-compose"
+alias pvpn="sudo protonvpn-cli"
