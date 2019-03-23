@@ -1,0 +1,12 @@
+[user]
+    name = Alex Thomassen
+    email = alex@thomassen.xyz
+
+[commit]
+    gpgsign = true
+
+[url "git@github.com:"]
+    insteadOf = gh:
+
+[url "git@github.com:Decicus/"]
+    insteadOf = me:
