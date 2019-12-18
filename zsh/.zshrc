@@ -12,7 +12,6 @@ plugins=(
     node
     nvm
     screen
-    zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
