@@ -9,5 +9,5 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 # Save the current .zshrc file (on host) to a backup file.
 mv $HOME/.zshrc $HOME/.zshrc.backup
 
-# Hardlink the dotfiles .zshrc to home directory of user.
-ln $ZSH_CONFDIR/.zshrc $HOME/.zshrc
+# Copy the ZSH config to the home directory.
+cp $ZSH_CONFDIR/.zshrc $HOME/.zshrc
