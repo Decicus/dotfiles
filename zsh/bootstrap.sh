@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This script already assumes `zsh` and `git` are both already installed
 # via the initial setup (I always do this), so really all that happens here
@@ -10,11 +10,16 @@ ZSH_CONFDIR=$(dirname "$0")
 # Run oh-my-zsh installer
 git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh;
 
-# Save the current .zshrc file (on host) to a backup file.
-mv "${HOME}/.zshrc" "${HOME}/.zshrc.backup";
+ZSH_CONF="${HOME}/.zshrc";
+
+# Save the current .zshrc file to a backup file.
+# but check if it exists first.
+if [[ -f "${ZSH_CONF}" ]]; then
+    mv "${ZSH_CONF}" "${HOME}/.zshrc.backup";
+fi
 
 # Copy the ZSH config to the home directory.
-cp "${ZSH_CONFDIR}/.zshrc" "${HOME}/.zshrc";
+cp "${ZSH_CONFDIR}/.zshrc" "${ZSH_CONF}";
 
 # Prompt the user to change the shell.
 chsh -s $(which zsh);
