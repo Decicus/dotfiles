@@ -16,6 +16,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+export PATH=$PATH:$HOME/.bin
+
 alias dc="docker-compose"
 alias pvpn="sudo protonvpn-cli"
 
