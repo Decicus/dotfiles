@@ -28,6 +28,6 @@ prompt_context() {
 }
 
 # Aliases
-command -v batcat && alias cat="batcat -pp"
+command -v batcat >/dev/null 2>&1 && alias cat="batcat -pp"
 alias dc="docker compose"
 alias sauce="source ~/.zshrc";
