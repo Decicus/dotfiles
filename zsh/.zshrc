@@ -31,3 +31,6 @@ prompt_context() {
 command -v batcat >/dev/null 2>&1 && alias cat="batcat -pp"
 alias dc="docker compose"
 alias sauce="source ~/.zshrc";
+
+# Load host-specific configuration, aliases etc.
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
