@@ -21,5 +21,10 @@ fi
 # Copy the ZSH config to the home directory.
 cp "${ZSH_CONFDIR}/.zshrc" "${ZSH_CONF}";
 
+# Check if .zshrc.local exists, if not, create it
+if [[ ! -f "${HOME}/.zshrc.local" ]]; then
+    touch "${HOME}/.zshrc.local";
+fi
+
 # Prompt the user to change the shell.
 chsh -s $(which zsh);
