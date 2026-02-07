@@ -29,7 +29,17 @@ prompt_context() {
 
 # Aliases
 command -v batcat >/dev/null 2>&1 && alias cat="batcat -pp"
-alias dc="docker compose"
+
+## Docker / Podman
+alias dc="docker compose";
+
+# Check if Podman is installed instead of Docker and alias accordingly
+if command -v podman >/dev/null 2>&1; then
+    alias docker="podman";
+
+    alias dc="podman compose";
+fi
+
 alias sauce="source ~/.zshrc";
 
 # Load host-specific configuration, aliases etc.
